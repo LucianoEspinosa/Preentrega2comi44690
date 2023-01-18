@@ -11,10 +11,12 @@ const producto2 = new fragancia("dior", "homme intense", 35000);
 const producto3 = new fragancia("givenchy", "gentleman", 32000);
 const producto4 = new fragancia("givenchy", "play", 30000);
 const producto5 = new fragancia("moschino", "toy boy", 32000);
-const producto6 = new fragancia("azzaro", "wanted", 25000);
-const producto7 = new fragancia("azzaro", "most wanted", 25000);
+const producto6 = new fragancia("moschino", "toy 2", 30000);
+const producto7 = new fragancia("azzaro", "wanted", 25000);
+const producto8 = new fragancia("azzaro", "most wanted", 35000);
 
-const productos = [producto1, producto2, producto3, producto4, producto5, producto6];
+
+const productos = [producto1, producto2, producto3, producto4, producto5, producto6,producto7];
 const carrito = [];
 let deseaAgregarProductos = "";
 let precioTotal = 0;

@@ -16,7 +16,7 @@ const producto7 = new fragancia("azzaro", "wanted", 25000);
 const producto8 = new fragancia("azzaro", "most wanted", 35000);
 
 
-const productos = [producto1, producto2, producto3, producto4, producto5, producto6,producto7];
+const productos = [producto1, producto2, producto3, producto4, producto5, producto6,producto7, producto8];
 const carrito = [];
 let deseaAgregarProductos = "";
 let precioTotal = 0;

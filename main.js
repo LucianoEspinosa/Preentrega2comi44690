@@ -23,7 +23,7 @@ let precioTotal = 0;
 
 
 console.log(productos);
-alert("bienvenido a fragance.net");
+alert("bienvenido a fragance.net"); 
 let preg = "";
 pregunta();
 
@@ -31,7 +31,7 @@ if (preg == "si") {
     preguntaFiltro();
     agregarAlCarrito();
     do {
-        deseaAgregarProductos = prompt("Desea agregar mas productos al carrito").toLocaleLowerCase();
+        deseaAgregarProductos = prompt("Desea agregar mas productos al carrito").toLowerCase();
         while (deseaAgregarProductos != "si" && deseaAgregarProductos != "no") {
             deseaAgregarProductos = prompt("Ingreso incorrecto. Por favor ingrese 'si o 'no'");
         }
@@ -53,7 +53,7 @@ if (preg == "si") {
 function filtroDiseniador() {
     let existe = true;
 
-    let diseniador = prompt("seleccione marca o diseñador").toLocaleLowerCase();
+    let diseniador = prompt("seleccione marca o diseñador").toLowerCase();
     existe = productos.some(item => item.marca === diseniador);
     while (existe === false) {
         diseniador = prompt("el diseñador esta mal escrito o no trabajamos con el. Intente nuevamente");
@@ -77,10 +77,10 @@ function todosLosProductos() {
 }
 
 function pregunta() {
-    preg = prompt("Desea comprar alguna fragancia? si/no").toLocaleLowerCase();
+    preg = prompt("Desea comprar alguna fragancia? si/no").toLowerCase();
     while (preg != "si" && preg != "no") {
         alert("por favor ingrese si o no");
-        preg = prompt("ingrese si o no");
+        preg = prompt("ingrese si o no").toLowerCase();
     }
 
 }
@@ -99,7 +99,7 @@ function preguntaFiltro() {
 function agregarAlCarrito() {
     let existe = true;
     let deseaAgregarProductos = "";
-    let compra = prompt("ingrese el nombre de la fragancia para agregar al carrito");
+    let compra = prompt("ingrese el nombre de la fragancia para agregar al carrito").toLowerCase();
     existe = productos.some(item => item.nombre === compra);
     while (existe === false) {
         compra = prompt("el nombre de la fragancia esta mal escrito o no la tenemos a disposicion en este momento. Intente nuevamente");

@@ -16,14 +16,14 @@ const producto7 = new fragancia("azzaro", "wanted", 25000);
 const producto8 = new fragancia("azzaro", "most wanted", 35000);
 
 
-const productos = [producto1, producto2, producto3, producto4, producto5, producto6,producto7, producto8];
+const productos = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8];
 const carrito = [];
 let deseaAgregarProductos = "";
 let precioTotal = 0;
 
 
 console.log(productos);
-alert("bienvenido a fragance.net"); 
+alert("bienvenido a fragance.net");
 let preg = "";
 pregunta();
 
@@ -52,13 +52,13 @@ if (preg == "si") {
 
 function filtroDiseniador() {
     let existe = true;
-
-    let diseniador = prompt("seleccione marca o diseñador").toLowerCase();
+    alert("Actualmente trabajamos con los siguiente diseñadores. Dior - Givenchy - Moschino - Azzaro")
+    let diseniador = prompt("Seleccione marca o diseñador").toLowerCase();
     existe = productos.some(item => item.marca === diseniador);
     while (existe === false) {
-        diseniador = prompt("el diseñador esta mal escrito o no trabajamos con el. Intente nuevamente");
+        diseniador = prompt("El diseñador esta mal escrito o no trabajamos con el. Intente nuevamente");
         existe = productos.some(item => item.marca === diseniador);
-        
+
     }
     const filtroMarcas = productos.filter(p => p.marca == diseniador);
     console.log(filtroMarcas);
@@ -99,10 +99,10 @@ function preguntaFiltro() {
 function agregarAlCarrito() {
     let existe = true;
     let deseaAgregarProductos = "";
-    let compra = prompt("ingrese el nombre de la fragancia para agregar al carrito").toLowerCase();
+    let compra = prompt("Ingrese el nombre de la fragancia para agregar al carrito").toLowerCase();
     existe = productos.some(item => item.nombre === compra);
     while (existe === false) {
-        compra = prompt("el nombre de la fragancia esta mal escrito o no la tenemos a disposicion en este momento. Intente nuevamente");
+        compra = prompt("El nombre de la fragancia esta mal escrito o no la tenemos a disposicion en este momento. Intente nuevamente");
         existe = productos.some(item => item.nombre === compra);
     }
     for (let item of productos) {
